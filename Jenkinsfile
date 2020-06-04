@@ -9,7 +9,8 @@ node {
 
     stage('Build image') {
         /* This builds the actual image*/
-        app = docker . build ("thiru3706/tomcattest")
+
+        app = docker .build ("thiru3706/tomcattest")
     }
 
     stage('Test image') {
