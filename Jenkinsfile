@@ -22,9 +22,9 @@ node {
 
     stage('push image') {
         
-        docker.withRegistry('https://hub.docker.com/repository/docker/thiru3706/tomcat', 'DOCKER1') {
+        docker.withRegistry('https://registry.hub.docker.com', 'DOCKER1') {
             app.push("${env.BUILD_NUMBER}")
-            app.push()
+            app.push("latest")
             } 
 		echo "pushed docker image successfully"
     }
