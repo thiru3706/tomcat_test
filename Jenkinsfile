@@ -20,14 +20,6 @@ node {
         }
     }
 
-    stage('push image') {
-        
-        docker.withRegistry('https://registry.hub.docker.com', 'DOCKER1') {
-            app.push("${env.BUILD_NUMBER}")
-            app.push("latest")
-            } 
-		echo "pushed docker image successfully"
-    }
     stage('ansible playbook'){
 	steps{
 	     script{
