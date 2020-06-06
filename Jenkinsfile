@@ -24,7 +24,7 @@ node {
             steps {
                 script {
                 
-               def tfHome = tool name: 'Ansible'
+               def tfHome = tool name: 'ansible'
                 env.PATH = "${tfHome}:${env.PATH}"
                  sh 'ansible --version'
                     
@@ -42,6 +42,7 @@ node {
               {
 }
 } 
+}
     stage('ansible playbook'){
 	steps{
 	     script{
@@ -50,4 +51,5 @@ node {
 }
 
 }
+
 }
