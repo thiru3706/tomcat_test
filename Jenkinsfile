@@ -40,7 +40,8 @@ node {
                  
               dir('dev/ansible')
               {
- 
+}
+} 
     stage('ansible playbook'){
 	steps{
 	     script{
